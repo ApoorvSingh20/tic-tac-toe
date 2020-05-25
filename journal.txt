@@ -1,0 +1,15 @@
+Reflection of challenges I faced:
+
+I've used simple 'for' loops to iterate throught the table array, and used the follwing conditions to match the diagonal and straight line elemts in the table array:
+for (var j = 0; j < 3; j++) {     //first diagonal
+        result= result && (table[j][j] == player);
+    }
+
+for (var j = 0; j < 3; j++) {  //second diagonal
+        result= result && (table[2-j][j] == player);
+
+for (var j = 0; j < 3; j++) {      //lines 
+result = result && (table[k][j] == player);
+
+for (var j = 0; j < 3; j++) {      //colums
+result = result && (table[j][k] == player);
